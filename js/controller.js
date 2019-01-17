@@ -18,23 +18,20 @@ $("#btnSave").click(function () {
         $("#txtName").val(cstname);
         $("#txtAddress").val(cstaddress);
         
-        
+        $("#btnDelete").off("click")
         $("#btnDelete").click(function(){
             for(i=0; i<$("#tblCustomer").length;i++){
-                var id = $("#txtID").val();
+                var selectedid = $("#txtID").val();
                 alert("Deleting Records")
-                if(id==cstid){
-                    $("#tblCustomer tbody").remove();
+                if(selectedid==cstid){
+                    $("#tblCustomer tbody tr td").remove();
                 }
             }
             $("#txtID").val("");
             $("#txtName").val("");
             $("#txtAddress").val("");
-            return;
         });
-        return;
-
-    })
+    });
 });
 
 
