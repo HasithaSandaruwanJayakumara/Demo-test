@@ -21,17 +21,18 @@ $("#btnSave").click(function () {
         
         $("#btnDelete").click(function(){
             for(i=0; i<$("#tblCustomer").length;i++){
-                var cstid = $("tblCustomer").children().children().first().text();
                 var id = $("#txtID").val();
-                alert(cstid)
+                alert("Deleting Records")
                 if(id==cstid){
-                    alert("Working");
+                    $("#tblCustomer tbody").remove();
                 }
             }
             $("#txtID").val("");
             $("#txtName").val("");
             $("#txtAddress").val("");
+            return;
         });
+        return;
 
     })
 });
